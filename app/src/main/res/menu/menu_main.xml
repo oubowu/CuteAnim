@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.oushangfeng.cuteanim.MainActivity">
+    <item
+        android:id="@+id/sun_rise"
+        android:orderInCategory="0"
+        android:title="小太阳"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/triangle"
+        android:orderInCategory="1"
+        android:title="三角形"
+        app:showAsAction="never"/>
+
+</menu>
