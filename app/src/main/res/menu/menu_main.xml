@@ -20,4 +20,10 @@
         android:title="吃豆人"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/eye_heart"
+        android:orderInCategory="3"
+        android:title="眼+心"
+        app:showAsAction="never"/>
+
 </menu>
