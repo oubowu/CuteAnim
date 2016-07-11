@@ -26,4 +26,10 @@
         android:title="眼+心"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/shine"
+        android:orderInCategory="4"
+        android:title="点赞效果"
+        app:showAsAction="never"/>
+
 </menu>

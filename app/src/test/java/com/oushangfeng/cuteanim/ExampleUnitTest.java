@@ -11,5 +11,11 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+
+        String date = "2016年12月11日";
+        String dates = date.replace("年","-").replace("月","-").replace("日","");
+
+        System.out.println(dates);
+
     }
 }

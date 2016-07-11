@@ -38,4 +38,10 @@
         android:layout_centerInParent="true"
         android:visibility="gone"/>
 
+    <com.oushangfeng.cuteanim.ShineView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
 </RelativeLayout>
