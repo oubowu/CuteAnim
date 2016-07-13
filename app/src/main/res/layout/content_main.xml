@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
     <com.oushangfeng.cuteanim.TriangleView
         android:layout_width="wrap_content"
@@ -39,9 +39,66 @@
         android:visibility="gone"/>
 
     <com.oushangfeng.cuteanim.ShineView
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="20dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:src="@mipmap/heart"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="我要炸了"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我要炸了"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我要炸了"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+    <com.oushangfeng.cuteanim.ShineContainer
+        android:id="@+id/shine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00334455"
+        app:targetId="@+id/tv"/>
+
+    <com.oushangfeng.cuteanim.ShineContainer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00334455"
+        app:targetId="@+id/iv"/>
+
+    <com.oushangfeng.cuteanim.ShineContainer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00334455"
+        app:targetId="@+id/ll"/>
 
 </RelativeLayout>

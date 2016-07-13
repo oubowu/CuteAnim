@@ -58,28 +58,23 @@ public class ShineView extends View {
     }
 
     /**
-     * @see "http://blog.csdn.net/sjf0115/article/details/8698619"
      * @param bitmap
+     * @see "http://blog.csdn.net/sjf0115/article/details/8698619"
      */
     private void tintColor(Bitmap bitmap) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
 
-        mBitmap = Bitmap
-                .createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
 
         Canvas canvas = new Canvas(mBitmap);
         Paint paint = new Paint();
         ColorMatrix colorMatrix = new ColorMatrix();
-        colorMatrix.setSaturation(0.5f);
+        colorMatrix.setSaturation(1);
         /*转成#FC9642*/
-        float[] colorArray = {0, 0, 0, 0, 255,
-                0, 0, 0, 0, 150,
-                0, 0, 0, 0, 66,
-                0, 0, 0, 1, 0};
+        float[] colorArray = {0, 0, 0, 0, 255, 0, 0, 0, 0, 150, 0, 0, 0, 0, 66, 0, 0, 0, 1, 0};
         colorMatrix.set(colorArray);
-        ColorMatrixColorFilter colorMatrixFilter = new ColorMatrixColorFilter(
-                colorMatrix);
+        ColorMatrixColorFilter colorMatrixFilter = new ColorMatrixColorFilter(colorMatrix);
         paint.setColorFilter(colorMatrixFilter);
         canvas.drawBitmap(bitmap, 0, 0, paint);
 
@@ -214,8 +209,8 @@ public class ShineView extends View {
                         mDisappear = false;
                         mBoomRadius = mDiagonalLine / 2 + (float) animation.getAnimatedValue();
                     } else {
-                        mBoomRadius = mDiagonalLine * 3 / 4 + (float) animation.getAnimatedValue();
-                        mOffset = (float) animation.getAnimatedValue() / 2f;
+                        mBoomRadius = mDiagonalLine / 2 + (float) animation.getAnimatedValue();
+                        mOffset = ((float) animation.getAnimatedValue() - mDiagonalLine / 4) / 4;
                     }
                     mScaleX = mScaleY = 0;
                     invalidate();
